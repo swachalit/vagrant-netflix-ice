@@ -1,0 +1,9 @@
+---
+ice_war_url: https://netflixoss.ci.cloudbees.com/job/ice-master/lastSuccessfulBuild/artifact/target/ice.war
+ice_processor: "true"
+ice_reader: "false"
+ice_billing_buckets: []
+ice_billing_bucket_prefix: []
+ice_company_name: Acme Inc.
+ice_work_bucket: work_s3bucketname
+ice_aws_account_id1: "123456789011"

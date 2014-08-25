@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Server port="8005" shutdown="SHUTDOWN">
+  <Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />
+  <Listener className="org.apache.catalina.core.JasperListener" />
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+  <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" />
+  <Service name="Catalina">
+    <Connector port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               URIEncoding="UTF-8"
+               redirectPort="8443" />
+    <Engine name="Catalina" defaultHost="localhost">
+      <Host name="localhost" appBase="webapps"
+            unpackWARs="true" autoDeploy="true"
+            deployOnStartup="false">
+        <Context className="org.apache.catalina.core.StandardContext"
+                 cachingAllowed="true"
+                 charsetMapperClass="org.apache.catalina.util.CharsetMapper"
+                 cookies="true" crossContext="false" displayName="Welcome to Ice"
+                 docBase="ice" path="" privileged="false"
+                 reloadable="false" swallowOutput="false" useNaming="true"
+                 wrapperClass="org.apache.catalina.core.StandardWrapper">
+        </Context>
+        <Valve className="org.apache.catalina.valves.AccessLogValve" pattern="common" />
+      </Host>
+    </Engine>
+  </Service>
+</Server>

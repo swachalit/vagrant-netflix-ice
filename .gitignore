@@ -1,0 +1,8 @@
+.vagrant
+group_vars/*
+data/ice_processor/*
+data/ice_reader/*
+
+!group_vars/all.example
+!data/ice_processor/.gitkeep
+!data/ice_reader/.gitkeep

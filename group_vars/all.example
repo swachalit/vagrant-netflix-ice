@@ -1,0 +1,13 @@
+---
+aws_access_key: ""
+aws_secret_key: ""
+
+tomcat_java_opts: "-Dice.s3AccessKeyId={{ aws_access_key }} -Dice.s3SecretKey={{ aws_secret_key }}"
+
+ice_processor: "true"
+ice_reader: "true"
+ice_billing_buckets:
+  - acme-billing
+ice_company_name: Acme Corporation
+ice_work_bucket: acme-billing-processed
+ice_aws_account_id1: "124567890"
