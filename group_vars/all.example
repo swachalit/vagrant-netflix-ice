@@ -10,4 +10,5 @@ ice_billing_buckets:
   - acme-billing
 ice_company_name: Acme Corporation
 ice_work_bucket: acme-billing-processed
-ice_aws_account_id1: "124567890"
+ice_aws_account_mapping:
+  - { id: "123456789011", name: "account1" }

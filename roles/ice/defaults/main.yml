@@ -6,4 +6,5 @@ ice_billing_buckets: []
 ice_billing_bucket_prefix: []
 ice_company_name: Acme Inc.
 ice_work_bucket: work_s3bucketname
-ice_aws_account_id1: "123456789011"
+ice_aws_account_mapping:
+  - { id: "123456789011", name: "account1" }

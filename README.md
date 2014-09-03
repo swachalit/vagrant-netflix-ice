@@ -18,7 +18,7 @@ $ cp group_vars/all.sample group_vars/all
 - `aws_secret_key` - AWS secret key
 - `ice_billing_buckets` - S3 bucket housing the detailed billing reports
 - `ice_work_bucket` - S3 bucket where Ice deposits processed billing information
-- `ice_aws_account_id1` - AWS account ID
+- `ice_aws_account_mapping` - Mapping of AWS account ID and name
 
 **Note**: Ensure that the account associated with your `aws_access_key` and `aws_secret_key` can read from the `ice_billing_buckets`, read and write to the `ice_work_bucket`, and make `DescribeReservedInstancesOfferings` EC2 API calls. `ice-iam-policy.json` provides a sample IAM policy.
 
