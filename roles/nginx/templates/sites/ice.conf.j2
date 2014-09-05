@@ -1,0 +1,16 @@
+server {
+  listen *:80;
+
+  {% if ice_server_name is defined -%}
+  server_name {{ ice_server_name }};
+  {% endif %}
+
+  access_log /var/log/nginx/{{ nginx_site_name }}.access.log;
+
+  location / {
+    proxy_pass http://localhost:8080/;
+    proxy_set_header Host $http_host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_redirect off;
+  }
+}

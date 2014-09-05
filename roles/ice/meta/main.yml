@@ -1,3 +1,4 @@
 ---
 dependencies:
   - { role: "tomcat" }
+  - { role: "nginx", nginx_site_name: "ice" }
