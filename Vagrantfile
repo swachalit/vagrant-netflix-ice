@@ -7,6 +7,12 @@ end
 
 VAGRANTFILE_API_VERSION = "2"
 
+# Ensure role dependencies are in place
+if [ "up", "provision" ].include?(ARGV.first) && File.directory?("roles") &&
+  !(File.directory?("roles/hectcastro.ice") || File.symlink?("roles/hectcastro.ice"))
+  system("ansible-galaxy install -r roles.txt -p roles")
+end
+
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.hostname = "netflix-ice"
